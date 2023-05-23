@@ -1,12 +1,37 @@
-import './App.css';
-import Head from './components/Head';
+import "./App.css";
+import Body from "./components/Body";
+import Head from "./components/Head";
+import MainContainer from "./components/MainContainer";
+import WatchPage from "./components/WatchPage";
+import { Provider } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import store from "./utils/store.js";
+import ErrorComponent from "./pages/ErrorComponents";
 function App() {
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Body />,
+      errorElement:<ErrorComponent/>,
+      children: [
+        {
+          path: "/",
+          element: <MainContainer />,
+        },
+        {
+          path: "watch",
+          element: <WatchPage />,
+        },
+      ],
+    },
+  ]);
   return (
-    <>
-    <h2 className="bg-red-500">hello youtube</h2>
-<Head/>
-    
-    </>
+    <Provider store={store}>
+      <>
+        <Head />
+        <RouterProvider router={appRouter} />
+      </>
+    </Provider>
   );
 }
 
