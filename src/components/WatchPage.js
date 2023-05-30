@@ -9,9 +9,9 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
-  },[]);
+  }, []);
   return (
-    <div className="flex flex-col w-full">
+    <div className=" dark:bg-slate-800 dark:text-yellow-50 flex flex-col w-full">
       <div className="px-5 flex w-full">
         <div className="">
           <iframe
