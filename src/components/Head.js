@@ -6,9 +6,12 @@ import { cacheResults } from "../utils/searchSlice";
 import { YOUTUBE_SUGGESTION_API } from "../utils/constant";
 import { addSearchString } from "../utils/categorySlice";
 
+import { useNavigate } from "react-router-dom";
+
 const Head = () => {
   useMy(); //its a data handling hook
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [theme, setTheme] = useState("light");
 
@@ -60,6 +63,7 @@ const Head = () => {
   const searchQueryHandler = (event) => {
     if (event?.key === "Enter" && searchQuery?.length > 0) {
       dispatch(addSearchString(searchQuery));
+      navigate(`/sarchResult/?query=${searchQuery}`);
     }
   };
   return (
@@ -105,6 +109,7 @@ const Head = () => {
             onClick={() => {
               if (searchQuery.length > 0) {
                 dispatch(addSearchString(searchQuery));
+                navigate(`/sarchResult/?query=${searchQuery}`);
               }
             }}
           >
@@ -124,6 +129,7 @@ const Head = () => {
                     onClick={() => {
                       setSearchQuery(item);
                       dispatch(addSearchString(searchQuery));
+                      navigate(`/sarchResult/?query=${searchQuery}`);
                     }}
                   >
                     {item}

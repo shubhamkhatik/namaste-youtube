@@ -19,6 +19,10 @@ function App() {
           element: <MainContainer />,
         },
         {
+          path: "/sarchResult/?",
+          element: <MainContainer />,
+        },
+        {
           path: "watch",
           element: <WatchPage />,
         },
@@ -28,7 +32,7 @@ function App() {
   return (
     <Provider store={store}>
       <>
-        <Head />
+        {/* <Head /> */}
         <RouterProvider router={appRouter} />
       </>
     </Provider>

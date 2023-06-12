@@ -3,6 +3,7 @@ import appSlice from "./appSlice";
 import dataSlice from "./dataSlice";
 import categorySlice from "./categorySlice";
 import searchSlice from "./searchSlice";
+import chatSlice from "./chatSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     data:dataSlice,
     category: categorySlice,
     search: searchSlice,
+    chat:chatSlice,
   },
 });
 

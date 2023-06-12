@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
+import LiveChat from "./Chat/LiveChat"
+import CommentSection from "./comment/CommentSection"
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -11,20 +13,26 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className=" dark:bg-slate-800 dark:text-yellow-50 flex flex-col w-full">
-      <div className="px-5 flex w-full">
-        <div className="">
+    <div className=" dark:bg-slate-800 dark:text-yellow-50 flex flex-col w-full lg:flex-row ">
+      <div className="flex lg:w-[70%] w-full flex-col">
+       
           <iframe
-            width="1100"
-            height="600"
+            width="900"
+            height="500"
             src={"https://www.youtube.com/embed/" + searchParams.get("v")}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-        </div>
+          <CommentSection/>
+       
       </div>
+      <div className="flex lg:w-[30%] w-full flex-col">
+            <LiveChat/>
+            {/* <RelatedVideos/> */}
+        </div>
+
     </div>
   );
 };
