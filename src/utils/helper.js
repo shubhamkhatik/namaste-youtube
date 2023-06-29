@@ -51,3 +51,86 @@ export const makeRandomMessage=()=> {
       
     return messages[Math.floor(Math.random() * messages.length)];
 }
+
+export const commentsData = [
+    {
+      id: 1,
+      body: "I think this topic is very interesting.",
+      author: "Karen Smith",
+      replies: [
+        {
+          id: 2,
+          body: "I agree with you, Karen!",
+          author: "Bob Johnson",
+          replies: [
+            {
+              id: 3,
+              body: "I also find it fascinating.",
+              author: "Emily Davis",
+              replies: [
+                {
+                  id: 4,
+                  body: "Yes, this is a great discussion.",
+                  author: "Bob Johnson",
+                  replies: [],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      body: "I have a different perspective on this topic.",
+      author: "Michael Lee",
+      replies: [
+        {
+          id: 6,
+          body: "Interesting, can you share more about your viewpoint?",
+          author: "Karen Smith",
+          replies: [
+            {
+              id: 7,
+              body: "I'm also curious to hear more.",
+              author: "Emily Davis",
+              replies: [
+                {
+                  id: 8,
+                  body: "Me too!",
+                  author: "Bob Johnson",
+                  replies: [],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 9,
+      body: "I think we should all try to keep an open mind.",
+      author: "Sarah Brown",
+      replies: [
+        {
+          id: 10,
+          body: "I completely agree, Sarah.",
+          author: "Michael Lee",
+          replies: [],
+        },
+        {
+          id: 11,
+          body: "Well-said, Michael.",
+          author: "Jordan Cooper",
+          replies: [],
+        },
+      ],
+    },
+  ];
+
+
+
+
+  export const generateUniqueId = () => {
+    return Math.random().toString(36).slice(2, 9);
+  };

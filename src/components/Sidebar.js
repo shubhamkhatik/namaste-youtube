@@ -19,43 +19,73 @@ const Sidebar = () => {
     <div className="dark:bg-slate-800 dark:text-yellow-50 p-5 shadow-lg w-48">
       <div>
         <ul>
-          <li onClick={() => handleItemClick("trending in india")}>
-            <NavLink
-              to="/"
-              style={({ isActive, isPending }) => {
-                return {
-                  fontWeight: isActive ? "bold" : "",
-                  color: isPending ? "red" : "black",
-                };
-              }}
-            >
+          <NavLink
+            to="/home"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isPending ? "red" : "green",
+              };
+            }}
+          >
+            <li onClick={() => handleItemClick(" top trending in india today")}>
               Home
-            </NavLink>
-          </li>
-          <li onClick={() => handleItemClick("trending Shorts in india")}>
-            <NavLink
-              to="/"
-              activeClassName="activeNavLink"
-            >
+            </li>
+          </NavLink>
+          <NavLink
+            to="/shorts"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isPending ? "red" : "green",
+              };
+            }}
+          >
+            <li onClick={() => handleItemClick("trending Shorts in india")}>
               Shorts
-            </NavLink>
-          </li>
-          <li onClick={() => handleItemClick("trending Live videos in india")}>
-            <NavLink
-              to="/"
-              activeClassName="activeNavLink"
+            </li>
+          </NavLink>
+          <NavLink
+            to="/live"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isPending ? "red" : "green",
+              };
+            }}
+          >
+            <li
+              onClick={() => handleItemClick("trending Live videos in india")}
             >
               Live
-            </NavLink>
-          </li>
-          <li onClick={() => handleItemClick("trending JavaScript videos")}>
-            <NavLink
-              to="/"
-              activeClassName="activeNavLink"
-            >
+            </li>
+          </NavLink>
+          <NavLink
+            to="/gaming"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isPending ? "red" : "green",
+              };
+            }}
+          >
+            <li onClick={() => handleItemClick("trending gaming videos")}>
+              Gaming
+            </li>
+          </NavLink>
+          <NavLink
+            to="/javascript"
+            style={({ isActive, isPending }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isPending ? "red" : "green",
+              };
+            }}
+          >
+            <li onClick={() => handleItemClick("trending JavaScript videos")}>
               JavaScript
-            </NavLink>
-          </li>
+            </li>
+          </NavLink>
         </ul>
       </div>
 

@@ -19,12 +19,32 @@ function App() {
           element: <MainContainer />,
         },
         {
-          path: "/sarchResult/?",
+          path: "sarchResult",
           element: <MainContainer />,
         },
         {
           path: "watch",
           element: <WatchPage />,
+        },
+        {
+          path: "home",
+          element: <MainContainer />,
+        },
+        {
+          path: "shorts",
+          element: <MainContainer />,
+        },
+        {
+          path: "live",
+          element: <MainContainer />,
+        },
+        {
+          path: "javascript",
+          element: <MainContainer />,
+        },
+        {
+          path: "gaming",
+          element: <MainContainer />,
         },
       ],
     },
