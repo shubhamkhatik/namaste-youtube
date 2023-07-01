@@ -15,6 +15,9 @@ export const YOUTUBE_SUGGESTION_API =
 export const CATEGORY_ID_URL = "https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN&key=" + GOOGLE_API_KEY
 
 
-  
+export const reletedvideo= "https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&key="+GOOGLE_API_KEY+"&relatedToVideoId="
+
+
+
   
 

@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
 import LiveChat from "./Chat/LiveChat"
 import CommentSection from "./comment/CommentSection"
+import RelatedVideos from "./reletedVideos/RelatedVideos"
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -30,7 +31,7 @@ const WatchPage = () => {
       </div>
       <div className="flex lg:w-[30%] w-full flex-col">
             <LiveChat/>
-            {/* <RelatedVideos/> */}
+            <RelatedVideos/>
         </div>
 
     </div>
