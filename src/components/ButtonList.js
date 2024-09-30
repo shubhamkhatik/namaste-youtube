@@ -24,7 +24,7 @@ const ButtonList = () => {
   }
 
   return (
-    <div className="dark:bg-slate-800 dark:text-yellow-50 w-full flex overflow-x-scroll overflow-hidden">
+    <div className=" no-scrollbar dark:bg-slate-800 dark:text-yellow-50 w-full flex overflow-x-scroll overflow-hidden">
     
     
       {category.map((name) => (
