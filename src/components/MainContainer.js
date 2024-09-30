@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const MainContainer = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   return (
-    <div className={`${isMenuOpen ? "w-[88%]":"w-full"} `}>
+    <div className={`dark:bg-slate-800 dark:text-yellow-50 ${isMenuOpen ? "w-[88%]":"w-full"} `}>
       <ButtonList />
       <VideoContainer />
     </div>
