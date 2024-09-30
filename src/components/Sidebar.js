@@ -16,7 +16,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="dark:bg-slate-800 dark:text-yellow-50 p-5 shadow-lg w-48">
+    <div className="dark:bg-slate-800 dark:text-yellow-50 p-5 shadow-lg w-[12%]">
       <div>
         <ul>
           <NavLink
