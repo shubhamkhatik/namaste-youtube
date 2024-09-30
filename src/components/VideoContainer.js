@@ -12,8 +12,8 @@ const VideoContainer = () => {
 
   return (
     <div
-      className={`dark:bg-slate-800 dark:text-yellow-50 grid gap-4 w-full 
-      ${isMenuOpen ? "grid-cols-3 " : "grid-cols-4"}`}
+      className={`dark:bg-slate-800 dark:text-yellow-50 grid gap-4 
+      ${isMenuOpen ? "grid-cols-3 w-[88%]" : "grid-cols-4 w-full"}`}
     >
       {/* <div className="dark:bg-slate-800 dark:text-yellow-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5"> */}
       {!videos.length > 0 || loading ? (
